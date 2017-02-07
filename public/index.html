@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>An Idle</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    
+    <!-- JS -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <script src="/app/gameController.js"></script>
+    
+    <!-- App Modules -->
+    <script src="/app/app.module.js"></script>
+    
+    <!-- App Components -->
+    <script src="/app/nav-bar/nav-bar.component.js"></script>
+    <script src="/app/command-center/command-center.component.js"></script>
+    <script src="/app/cargo-hold/cargo-hold.component.js"></script>
+    <script src="/app/ship-yard/ship-yard.component.js"></script>
+    
+    <!-- Services -->
+    <script src="/app/services/ticker.js"></script>
+    
+    <base href="/"/>
+</head>
+<body data-ng-app="app">
+    <div class="container col-md-2"></div>
+    
+    <div class="container col-md-8">
+        
+        <nav-bar></nav-bar>
+        <data-ng-view></data-ng-view>
+        
+    </div>
+    
+    <div class="container col-md-2"></div>
+</body>
+</html>
