@@ -15,6 +15,6 @@
         <hr/>
         <p>Price: ${{ $ctrl.getData().price }}</p>
         <p>Amount Owned: {{ $ctrl.getData().amountOwned }}</p>
-        <button class="btn btn-standard">Buy 1</button>
+        <button class="btn btn-standard" data-ng-click="$ctrl.buy($ctrl.getData(), 1)">Buy 1</button>
     </div>
 </div>
