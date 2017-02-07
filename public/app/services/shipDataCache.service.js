@@ -2,7 +2,7 @@ angular.module('app').factory('shipDataCache', function(){
     
     var service = {
         
-        shipData: [
+        data: [
             {
                 name: "Ion-Pickaxe mk1",
                 price: 100,
@@ -30,7 +30,7 @@ angular.module('app').factory('shipDataCache', function(){
         ],
         
         getData: function(){
-            return service.shipData;
+            return service.data;
         }
         
     };

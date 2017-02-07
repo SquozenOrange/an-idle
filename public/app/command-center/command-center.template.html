@@ -7,15 +7,7 @@
           </ul>
         </div>
     </div>
-    <!-- The below resources panel needs to be it's own component -->
-    <div class="col-md-12 panel panel-default">
-        <div class="panel-heading">
-            Resources
-        </div>
-        <div class="panel-body">
-            Ore: 0
-        </div>
-    </div>
+    <resource-panel></resource-panel>
 </div>
 
 <div class="col-md-9">
@@ -24,9 +16,9 @@
         <small>{{ $ctrl.getData().description }}</small></h1>
         <img class="img img-thumbnail pull-right" src="{{ $ctrl.getData().imageUrl }}" height="150" width="150" alt="{{ $ctrl.getData().name }}"/>
         <hr/>
-        <p>Price: ${{ $ctrl.getData().price }}</p>
-        <p>Ore per second: {{ $ctrl.getData().orePerTick * 10 }}</p>
-        <p>Amount Owned: {{ $ctrl.getData().amountOwned }}</p>
+        <p>Price: {{ $ctrl.getData().price | currency }}</p>
+        <p>Ore per second: {{ $ctrl.getData().orePerTick * 10 | number }}</p>
+        <p>Amount Owned: {{ $ctrl.getData().amountOwned | number }}</p>
         <button class="btn btn-default" data-ng-click="$ctrl.buy($ctrl.getData(), 1)">Buy 1</button>
         <button class="btn btn-default" data-ng-click="$ctrl.buy($ctrl.getData(), 10)">Buy 10</button>
         <button class="btn btn-default" data-ng-click="$ctrl.buy($ctrl.getData(), 100)">Buy 100</button>

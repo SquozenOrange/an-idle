@@ -25,7 +25,7 @@ angular.module('app').component('commandCenter', {
         ctrl.buy = function(obj, amount){
             obj.amountOwned += amount;
             for(var i = 0; i < amount; i++){
-                obj.price = Math.ceil((obj.price *= 1.005));
+                obj.price = (obj.price *= 1.015);
             }
         };
         
