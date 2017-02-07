@@ -8,19 +8,25 @@ angular.module('app').component('commandCenter', {
         
         ctrl.data = shipDataCache.getData();
         
-        ctrl.queryLocation = $location.search().ship ? $location.search() : {ship: 0};
+        // ALL OF THIS NEEDS TO BE MOVED TO A NEW SERVICE THAT HANDLES QUERY STRINGS AND DATA LOOKUPS
         
-        ctrl.getData = function(){
-            if (ctrl.queryLocation.ship > (ctrl.data.length - 1)) {
-                return ctrl.data[0];
-            } else {
-                return ctrl.data[ctrl.queryLocation.ship];
-            }
-        };
+            ctrl.queryLocation = $location.search().ship ? $location.search() : {ship: 0};
+            
+            ctrl.getData = function(){
+                if (ctrl.queryLocation.ship > (ctrl.data.length - 1)) {
+                    return ctrl.data[0];
+                } else {
+                    return ctrl.data[ctrl.queryLocation.ship];
+                }
+            };
+        
+        // END OF ALL OF THIS 
         
         ctrl.buy = function(obj, amount){
             obj.amountOwned += amount;
-            obj.price = ~~(obj.price *= 1.05); // ~~ means floor
+            for(var i = 0; i < amount; i++){
+                obj.price = Math.ceil((obj.price *= 1.005));
+            }
         };
         
         return ctrl;

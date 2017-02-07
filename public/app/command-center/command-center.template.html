@@ -12,9 +12,12 @@
     <div class="col-md-12 well">
         <h1>{{ $ctrl.getData().name }}<br/>
         <small>{{ $ctrl.getData().description }}</small></h1>
+        <img class="img img-thumbnail" src="{{ $ctrl.getData().imageUrl }}" height="200" width="200" alt="{{ $ctrl.getData().name }}"/>
         <hr/>
         <p>Price: ${{ $ctrl.getData().price }}</p>
         <p>Amount Owned: {{ $ctrl.getData().amountOwned }}</p>
-        <button class="btn btn-standard" data-ng-click="$ctrl.buy($ctrl.getData(), 1)">Buy 1</button>
+        <button class="btn btn-default" data-ng-click="$ctrl.buy($ctrl.getData(), 1)">Buy 1</button>
+        <button class="btn btn-default" data-ng-click="$ctrl.buy($ctrl.getData(), 10)">Buy 10</button>
+        <button class="btn btn-default" data-ng-click="$ctrl.buy($ctrl.getData(), 100)">Buy 100</button>
     </div>
 </div>
