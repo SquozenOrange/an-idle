@@ -1,0 +1,23 @@
+{
+  "name": "an-idle",
+  "version": "1.0.0",
+  "description": "This is a simple Idle game made using Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phutureproof/an-idle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phutureproof/an-idle/issues"
+  },
+  "homepage": "https://github.com/phutureproof/an-idle#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
